@@ -1,0 +1,50 @@
+body {
+    font-family: 'Times New Roman', serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    line-height: 1.5;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+header h1,
+header h2 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0.2em 0;
+}
+header h2 {
+    color: #006EB6;
+}
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+main h2 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+main p {
+    text-align: left;
+    margin-top: 1rem;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer img {
+    height: 150px;
+}
