@@ -50,3 +50,35 @@ footer {
 footer img {
     height: 150px;
 }
+
+
+/* Dark */
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark .container {
+    background-color: #171717;
+    border: 1px solid #555;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark h2.subtitle {
+    color: #007ACC;
+    border-bottom: 1px solid #888;
+}
+
+body.dark p,
+body.dark em,
+body.dark ol {
+    color: #ccc;
+}
+
+body.dark footer {
+    color: #ddd;
+}
+
+body.dark footer img {
+    height: 50px;
+}
