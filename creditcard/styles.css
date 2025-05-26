@@ -1,0 +1,122 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: .5fr 1fr .5fr;
+}
+
+form {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: .1fr 1fr .1fr .2fr;
+    grid-gap: 10px;
+}
+
+#frontCard {
+    grid-area: 1 / 1 / 3 / 3;
+    z-index: 2;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgb(220, 223, 226);
+}
+
+#frontCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#frontTotal {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#cardImage {
+    grid-area: 1 / 2/ 2 / 3;
+}
+
+#frontCardNumber {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#frontCardHolder {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+#frontExpiration {
+    grid-area: 3 / 2 / 4 / 3;
+    padding: 5px;
+}
+
+#frontExpiration {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+}
+
+#expirationLabel {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+#expirationMonth {
+    width: 30px;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#expirationYear {
+    width: 30px;
+    padding: 0;
+    grid-area: 2 / 2 / 3 / 3;
+    transform: translateX(-30px);
+}
+
+#cardImage {
+    transform: translateX(100px);
+}
+
+#backCard {
+    grid-area: 2 / 2 / 4 / 4;
+    z-index: -2;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 8px;
+    padding-bottom: 25px;
+    background-color: rgb(220, 223, 226);
+}
+
+#backCard {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#blackStripe {
+    height: 50px;
+    background-color: black;
+    grid-area: 1 / 2 / 2 / 3;
+    z-index: 0;
+    width: 200px;
+    transform: translateX(20px);
+    position: relative;
+}
+
+#backCVC {
+    padding-left: 10px;
+    grid-area: 2 / 2 / 3 / 3;
+    width: 25px;
+    transform: translateY(150px);
+    transform: translateX(120px);
+}
+
+#CVC {
+    width: 20px
+}
+
+#submitButton {
+    grid-area: 4 / 3 / 5 / 4;
+}
