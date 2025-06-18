@@ -1,0 +1,143 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.header-logo {
+    width: 40px;
+    height: auto;
+}
+
+.header-title {
+    font-size: 24px; 
+}
+
+.search-bar {
+    display: flex;
+    width: 90%;
+    margin-top: 10px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #000000;
+}
+
+.search-bar button {
+    padding: 8px;
+    border: 1px solid #000000;
+    border-left: none;
+    background-color: #fff;
+    border-radius: 0 5px 5px 0;
+}
+
+.recipe-wrapper {
+    margin: 20px;
+}
+
+.recipe {
+    max-width: 90%;
+    margin: 20px auto;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.recipe img {
+    width: 100%; 
+}
+
+.recipe .recipe-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid #000000;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.recipe-tag {
+    margin-top: 5px;
+}
+
+.recipe h1 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.recipe .rating {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.social a {
+    margin: 0 5px;
+}
+
+.social img {
+    width: 30px;
+}
+.recipe-details {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .recipe {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%; 
+        padding: 20px;
+        gap: 20px; 
+        box-sizing: border-box; 
+    }
+
+    .recipe img {
+        width: 45%; 
+    }
+
+    .recipe-details {
+        display: block;
+        width: 50%; 
+    }
+}
+
+@media (min-width: 950px) {
+    .recipe {
+        padding: 30px; 
+    }
+
+    .recipe img {
+        width: 50%; 
+    }
+
+    .recipe-details {
+        width: 45%; 
+    }
+}
