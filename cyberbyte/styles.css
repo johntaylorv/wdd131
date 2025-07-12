@@ -2035,38 +2035,48 @@ html,
   color: #000; /* Adjust to white if needed on darker background */
   border-color: rgba(255, 0, 0, 0.907);
 }
-
-/* Smooth image transition */
-.framer-lp0tta > div:last-child img {
+/* Smooth image transition for all image containers */
+.framer-lp0tta div[style*="position: relative"] img {
   transition: opacity 0.3s ease;
 }
 
-/* Lower image opacity on hover */
-.framer-lp0tta > div:last-child:hover img {
+/* Lower image opacity on hover for all image containers */
+.framer-lp0tta div[style*="position: relative"]:hover img {
   opacity: 0.2;
 }
 
-/* Button appears on hover — already in JS, but style it to stay bold */
-.framer-lp0tta > div:last-child a {
-  font-weight: 700;
-  opacity: 0; /* start hidden */
-  transition: opacity 0.3s ease;
-  z-index: 2;
-}
-
-/* Bold button styles (can override some above) */
-.framer-lp0tta > div:last-child a {
-  background-color: rgba(0, 0, 0, 0.8); /* Darker for contrast */
+/* Base button styles inside image containers */
+.framer-lp0tta div[style*="position: relative"] a {
+  font-weight: 800;
   font-size: 1.1rem;
+  background-color: rgba(0, 0, 0, 0.8);
   border: 2px solid white;
   padding: 12px 24px;
   border-radius: 6px;
-  font-weight: 800; /* overrides the 700 above */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  text-decoration: none;
+  color: white;
 }
 
 /* Make button visible on hover */
-.framer-lp0tta > div:last-child:hover a {
+.framer-lp0tta div[style*="position: relative"]:hover a {
   opacity: 1;
+}
+/* Consistent sizing and aspect ratio for all images */
+.framer-lp0tta div[style*="position: relative"] img {
+  width: 100%;
+  max-width: 400px;
+  height: 250px; /* or another fixed height for consistency */
+  object-fit: cover;
+  border-radius: 8px; /* maintain visual style */
+}
+.framer-lp0tta {
+  align-items: stretch; /* instead of center */
+}
+.framer-lp0tta {
+  margin-bottom: 6rem; /* Adjust the value to increase or decrease spacing */
 }
 
 

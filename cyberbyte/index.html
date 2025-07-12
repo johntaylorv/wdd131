@@ -66,7 +66,8 @@
             </div>
             <div class="framer-1aeq0dl">
                 <div class="framer-lp0tta" style="display: flex; align-items: center; gap: 2rem;">
-  <!-- Text Blurb -->
+
+  <!-- Text Blurb 1 -->
   <div class="framer-12ryz2e" style="flex: 1;">
     <div class="ssr-variant hidden-1t1lcz3 hidden-1ds7nvw">
       <div class="framer-gkqmit" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
@@ -80,7 +81,7 @@
     </div>
   </div>
 
-  <!-- Image with hover button -->
+  <!-- Image with hover button 1-->
   <div style="position: relative; flex: 1; max-width: 400px;">
     <img src="images/final-logo2.jpg" alt="Cybersecurity Image" style="width: 100%; height: auto; display: block; border-radius: 8px;" />
     <a href="https://www.comptia.org/en-us/blog/what-is-cybersecurity/" target="_blank" rel="noopener noreferrer"
@@ -93,62 +94,79 @@
   </div>
 </div>
 
-<script>
-  // Simple hover effect to show button when hovering the image container
-  const imgContainer = document.querySelector('.framer-lp0tta > div:last-child');
-  const button = imgContainer.querySelector('a');
 
-  imgContainer.addEventListener('mouseenter', () => {
-    button.style.opacity = '1';
-  });
-  imgContainer.addEventListener('mouseleave', () => {
-    button.style.opacity = '0';
+
+<div class="framer-lp0tta" style="display: flex; align-items: center; gap: 2rem;">
+  <!-- Image container 2 -->
+  <div style="position: relative; flex: 1; max-width: 400px;">
+    <img src="images/final-logo3.jpg" alt="Cybersecurity Threats Image" style="width: 100%; height: auto; display: block; border-radius: 8px;" />
+    <a href="https://www.cisa.gov" target="_blank" rel="noopener noreferrer"
+       style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+              background-color: rgba(0, 0, 0, 0.6); color: white; padding: 10px 20px;
+              border-radius: 4px; text-decoration: none; font-weight: bold; opacity: 0;
+              transition: opacity 0.3s ease;">
+      Learn More
+    </a>
+  </div>
+
+  <!-- Text Block 2 -->
+  <div class="framer-12ryz2e" style="flex: 1;">
+    <div class="ssr-variant hidden-1t1lcz3 hidden-1ds7nvw">
+      <div class="framer-gkqmit" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
+        <p style="--font-selector:SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlETXlMQ0FpZDJkb2RDSWdOekF3;--framer-font-family:&quot;Inter Variable&quot;, &quot;Inter Placeholder&quot;, sans-serif;--framer-font-open-type-features:'cv01' on, 'cv09' on, 'cv05' on, 'ss03' on;--framer-font-size:32px;--framer-font-variation-axes:&quot;opsz&quot; 32, &quot;wght&quot; 700;--framer-letter-spacing:-0.03em;--framer-line-height:1em;--framer-text-alignment:left;--framer-text-color:var(--token-8961fb69-0ea3-46ab-8b8e-1f9187ebd1a9, rgb(0, 0, 0))" class="framer-text">Threats &amp; defense.</p>
+      </div>
+    </div>
+    <div class="ssr-variant hidden-1ds7nvw">
+      <div class="framer-1kwsyu1" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
+        <p style="--font-selector:SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlETXlMQ0FpZDJkb2RDSWdOVEF3;--framer-font-family:&quot;Inter Variable&quot;, &quot;Inter Placeholder&quot;, sans-serif;--framer-font-open-type-features:'cv09' on, 'cv01' on, 'cv05' on, 'ss03' on;--framer-font-size:22px;--framer-font-variation-axes:&quot;opsz&quot; 32, &quot;wght&quot; 500;--framer-letter-spacing:-0.01em;--framer-text-alignment:left;--framer-text-color:var(--token-d3650bef-13f5-49bd-88f0-8a82034ef0d6, rgb(153, 153, 153))" class="framer-text">Explore the most common digital threats and how to protect your personal data and devices.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.framer-lp0tta div[style*="position: relative"]').forEach(container => {
+      const btn = container.querySelector('a');
+      if (btn) {
+        container.addEventListener('mouseenter', () => btn.style.opacity = '1');
+        container.addEventListener('mouseleave', () => btn.style.opacity = '0');
+      }
+    });
   });
 </script>
 
-                <div class="framer-17sirqj">
-                    <div class="framer-kik5h7" data-framer-name="Placeholder">
-                        <div data-framer-component-type="SVG" radius="150" style="image-rendering:pixelated;flex-shrink:0" class="framer-y6p3oy" aria-hidden="true">
-                            <div class="svgContainer" style="width:100%;height:100%;aspect-ratio:inherit"><svg style="width:100%;height:100%;" preserveAspectRatio="none" width="100%" height="100%">
-                                    <use href="#svg-1953388945_370"></use>
-                                </svg></div>
-                        </div>
-                    </div>
-                    <div class="framer-1axkk5m">
-                        <div class="ssr-variant hidden-1t1lcz3 hidden-1ds7nvw">
-                            <div class="framer-1xxat03" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
-                                <p style="--font-selector:SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlETXlMQ0FpZDJkb2RDSWdOekF3;--framer-font-family:&quot;Inter Variable&quot;, &quot;Inter Placeholder&quot;, sans-serif;--framer-font-open-type-features:'cv01' on, 'cv09' on, 'cv05' on, 'ss03' on;--framer-font-size:32px;--framer-font-variation-axes:&quot;opsz&quot; 32, &quot;wght&quot; 700;--framer-letter-spacing:-0.03em;--framer-line-height:1em;--framer-text-alignment:left;--framer-text-color:var(--token-8961fb69-0ea3-46ab-8b8e-1f9187ebd1a9, rgb(0, 0, 0))" class="framer-text">Threats &amp; defense.</p>
-                            </div>
-                        </div>
-                        <div class="ssr-variant hidden-1ds7nvw">
-                            <div class="framer-ul36k0" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
-                                <p style="--font-selector:SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlETXlMQ0FpZDJkb2RDSWdOVEF3;--framer-font-family:&quot;Inter Variable&quot;, &quot;Inter Placeholder&quot;, sans-serif;--framer-font-open-type-features:'cv09' on, 'cv01' on, 'cv05' on, 'ss03' on;--framer-font-size:22px;--framer-font-variation-axes:&quot;opsz&quot; 32, &quot;wght&quot; 500;--framer-letter-spacing:-0.01em;--framer-text-alignment:left;--framer-text-color:var(--token-d3650bef-13f5-49bd-88f0-8a82034ef0d6, rgb(153, 153, 153))" class="framer-text">Explore the most common digital threats and how to protect your personal data and devices.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="framer-1em4h5v">
-                    <div class="framer-7sifop">
-                        <div class="ssr-variant hidden-1t1lcz3 hidden-1ds7nvw">
-                            <div class="framer-jubq5p" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
-                                <p style="--font-selector:SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlETXlMQ0FpZDJkb2RDSWdOekF3;--framer-font-family:&quot;Inter Variable&quot;, &quot;Inter Placeholder&quot;, sans-serif;--framer-font-open-type-features:'cv01' on, 'cv09' on, 'cv05' on, 'ss03' on;--framer-font-size:32px;--framer-font-variation-axes:&quot;opsz&quot; 32, &quot;wght&quot; 700;--framer-letter-spacing:-0.03em;--framer-line-height:1em;--framer-text-alignment:left;--framer-text-color:var(--token-8961fb69-0ea3-46ab-8b8e-1f9187ebd1a9, rgb(0, 0, 0))" class="framer-text">Tools &amp; skills.</p>
-                            </div>
-                        </div>
-                        <div class="ssr-variant hidden-1ds7nvw">
-                            <div class="framer-eb35ka" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
-                                <p style="--font-selector:SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlETXlMQ0FpZDJkb2RDSWdOVEF3;--framer-font-family:&quot;Inter Variable&quot;, &quot;Inter Placeholder&quot;, sans-serif;--framer-font-open-type-features:'cv09' on, 'cv01' on, 'cv05' on, 'ss03' on;--framer-font-size:22px;--framer-font-variation-axes:&quot;opsz&quot; 32, &quot;wght&quot; 500;--framer-letter-spacing:-0.01em;--framer-text-alignment:left;--framer-text-color:var(--token-d3650bef-13f5-49bd-88f0-8a82034ef0d6, rgb(153, 153, 153))" class="framer-text">Get introduced to must-know cybersecurity tools, ethical hacking basics, and responsible web habits.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="framer-1s4rzyt" data-framer-name="Placeholder">
-                        <div data-framer-component-type="SVG" style="image-rendering:pixelated;flex-shrink:0" class="framer-tz3s5r" aria-hidden="true">
-                            <div class="svgContainer" style="width:100%;height:100%;aspect-ratio:inherit"><svg style="width:100%;height:100%;" preserveAspectRatio="none" width="100%" height="100%">
-                                    <use href="#svg-2096703612_381"></use>
-                                </svg></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+                <div class="framer-lp0tta" style="display: flex; align-items: center; gap: 2rem;">
+  <!-- Text Block 3-->
+  <div class="framer-12ryz2e" style="flex: 1;">
+    <div class="ssr-variant hidden-1t1lcz3 hidden-1ds7nvw">
+      <div class="framer-gkqmit" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
+        <p style="--font-selector:SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlETXlMQ0FpZDJkb2RDSWdOekF3;--framer-font-family:&quot;Inter Variable&quot;, &quot;Inter Placeholder&quot;, sans-serif;--framer-font-open-type-features:'cv01' on, 'cv09' on, 'cv05' on, 'ss03' on;--framer-font-size:32px;--framer-font-variation-axes:&quot;opsz&quot; 32, &quot;wght&quot; 700;--framer-letter-spacing:-0.03em;--framer-line-height:1em;--framer-text-alignment:left;--framer-text-color:var(--token-8961fb69-0ea3-46ab-8b8e-1f9187ebd1a9, rgb(0, 0, 0))" class="framer-text">Tools &amp; skills.</p>
+      </div>
+    </div>
+    <div class="ssr-variant hidden-1ds7nvw">
+      <div class="framer-1kwsyu1" style="outline:none;display:flex;flex-direction:column;justify-content:flex-start;flex-shrink:0;transform:none" data-framer-component-type="RichTextContainer">
+        <p style="--font-selector:SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlETXlMQ0FpZDJkb2RDSWdOVEF3;--framer-font-family:&quot;Inter Variable&quot;, &quot;Inter Placeholder&quot;, sans-serif;--framer-font-open-type-features:'cv09' on, 'cv01' on, 'cv05' on, 'ss03' on;--framer-font-size:22px;--framer-font-variation-axes:&quot;opsz&quot; 32, &quot;wght&quot; 500;--framer-letter-spacing:-0.01em;--framer-text-alignment:left;--framer-text-color:var(--token-d3650bef-13f5-49bd-88f0-8a82034ef0d6, rgb(153, 153, 153))" class="framer-text">Discover essential cybersecurity tools and develop the skills needed to protect systems effectively.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image container with hover button 3-->
+  <div style="position: relative; flex: 1; max-width: 400px;">
+    <img src="images/final-logo4.jpg" alt="Cybersecurity Tools Image" style="width: 100%; height: auto; display: block; border-radius: 8px;" />
+    <a href="https://www.sans.org/tools/" target="_blank" rel="noopener noreferrer"
+       style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+              background-color: rgba(0, 0, 0, 0.6); color: white; padding: 10px 20px;
+              border-radius: 4px; text-decoration: none; font-weight: bold; opacity: 0;
+              transition: opacity 0.3s ease;">
+      Learn More
+    </a>
+  </div>
+</div>
+
             <div class="framer-1w7o6gn">
                 <div class="framer-11etht0">
                     <div class="ssr-variant hidden-1ds7nvw">
