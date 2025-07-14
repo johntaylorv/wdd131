@@ -1945,10 +1945,68 @@ html,
 .nav-links a:hover {
   text-decoration: underline;
 }
-/* Position logo in top-left */
+/* Position logo */
 .site-header {
   position: relative;
   padding: 1rem;
+   font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color, #0f1923);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+/* Logo/Brand Styling */
+.site-branding {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 1.5px;
+  color: var(--primary-color, #0f1923);
+   letter-spacing: 1px;
+}
+
+/* Navigation */
+.site-header {
+  background-color: var(--header-bg, #fff);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.main-nav {
+  width: 100%;
+  background-color: transparent; /* or set a background */
+}
+
+.nav-container {
+  width: 100%;
+  padding: 1rem 2rem; /* add side space */
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+   display: flex;
+  justify-content: space-between; /* Push links apart */
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 100%; /* Allow it to stretch fully */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary-color, #0f1923);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--secondary-color, #D61F1F);
 }
 
 /* Style the logo */
@@ -2079,4 +2137,131 @@ html,
   margin-bottom: 6rem; /* Adjust the value to increase or decrease spacing */
 }
 
+.lessons-section {
+  max-width: 1100px;
+  margin: 550px ; /* Adds space above and below */
+  padding: 0 1rem;
+}
+
+/* Section Headings */
+.lessons-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  color: var(--primary-color, #000);
+}
+
+.lessons-subtitle {
+  font-size: 1rem;
+  color: var(--accent-text-color, #999);
+  margin-bottom: 1.5rem;
+}
+
+/* Grid Container: 2x2 on medium screens, 1x1 on small, responsive */
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* Card Styling */
+.lesson-card {
+  text-align: left;
+  background: var(--card-bg, #fff);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  padding-bottom: 1rem; /* adds space inside the card */
+}
+
+.lesson-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Image Container with Overlay */
+.lesson-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.lesson-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/* "Read More" Button Overlay Style */
+.lesson-image a {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background-color: var(--secondary-color, #00b7ff);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.lesson-image:hover img {
+  opacity: 0.85;
+}
+
+.lesson-image:hover a {
+  opacity: 1;
+}
+
+/* Text Styling */
+.lesson-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0.75rem 1rem 0 1rem;
+  color: var(--primary-color, #000);
+}
+
+.lesson-date {
+  color: var(--accent-text-color, #999);
+  font-size: 0.875rem;
+  margin: 0.25rem 1rem 1rem 1rem;
+}
+@media (min-width: 700px) {
+  .lessons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--header-bg, #fff);
+  color: var(--accent-text-color, #999);
+  font-size: 0.875rem;
+  margin-top: 4rem;
+  border-top: 1px solid #ddd;
+  font-family: 'Bebas Neue', sans-serif;
+}
 
