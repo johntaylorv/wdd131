@@ -109,3 +109,98 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MITRE API*/
+async function loadAttackData() {
+  const res = await fetch('https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack.json');
+  const data = await res.json();
+
+  const techniques = data.objects.filter(o => o.type === 'attack-pattern');
+  const tactics = data.objects.filter(o => o.type === 'x-mitre-tactic');
+
+  // Map tactic shortnames to tactic data
+  const tacticMap = {};
+  tactics.forEach(tactic => {
+    tacticMap[tactic.x_mitre_shortname] = {
+      name: tactic.name,
+      techniques: []
+    };
+  });
+
+  techniques.forEach(tech => {
+    const phases = tech.kill_chain_phases || [];
+    phases.forEach(phase => {
+      const key = phase.phase_name;
+      if (tacticMap[key]) {
+        tacticMap[key].techniques.push(tech);
+      }
+    });
+  });
+
+  const matrix = document.getElementById('matrix-columns');
+  Object.entries(tacticMap).forEach(([shortname, tactic]) => {
+    const column = document.createElement('div');
+    column.className = 'matrix-column';
+    column.innerHTML = `<h3>${tactic.name}</h3>`;
+
+    tactic.techniques.forEach(t => {
+      const card = document.createElement('div');
+      card.className = 'matrix-card';
+      card.innerHTML = `<a href="https://attack.mitre.org/techniques/${t.external_references?.[0]?.external_id || ''}" target="_blank"><h4>${t.name}</h4></a>`;
+      column.appendChild(card);
+    });
+
+    matrix.appendChild(column);
+  });
+}
+loadAttackData();
+
+
+/*Hero Rotating Tips*/
+const tips = [
+  "Use strong, unique passwords for every account.",
+  "Enable two-factor authentication wherever possible.",
+  "Keep your software and systems up to date.",
+  "Be cautious of phishing emails and suspicious links.",
+  "Backup your data regularly to a secure location.",
+  "Use a password manager to store your credentials safely.",
+  "Avoid using public Wi-Fi for sensitive transactions.",
+  "Log out of accounts when done, especially on shared devices.",
+  "Don’t reuse passwords across websites or services.",
+  "Regularly review app permissions on your devices."
+];
+
+let tipIndex = 0;
+const tipElement = document.getElementById("tip-rotator");
+
+function rotateTip() {
+  tipElement.textContent = tips[tipIndex];
+  tipElement.style.animation = "none"; // Reset animation
+  tipElement.offsetHeight; // Trigger reflow
+  tipElement.style.animation = ""; // Re-apply animation
+
+  tipIndex = (tipIndex + 1) % tips.length;
+}
+
+rotateTip(); // Initial tip
+setInterval(rotateTip, 5000); // Rotate every 5 seconds

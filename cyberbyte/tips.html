@@ -1,35 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CyberByte - Tips & Framework</title>
+  <meta name="viewport" content="width=device-width" />
+  <title>CyberByte – Cybersecurity Tips</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1>Cyber Tips & MITRE ATT&CK</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="tips.html">Cyber Tips</a>
-    </nav>
-  </header>
-  <main>
-    <section class="tip-box">
-      <h2>Cyber Tip of the Moment</h2>
-      <p id="cyber-tip">Loading tip...</p>
-    </section>
 
-    <section class="mitre-framework">
-      <h2>MITRE ATT&CK Flashcards</h2>
-      <div class="flashcards" id="flashcard-container">
-        <!-- Cards inserted via JS -->
-      </div>
-    </section>
+<body>
+  <!-- Logo -->
+  <h1 class="logo">CyberByte</h1>
+
+  <!-- Nav -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tips.html">Explore</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Specific Content -->
+  <main class="tips-content">
+    
+<section id="attack-matrix">
+  <h2>MITRE ATT&CK Matrix</h2>
+
+  <!-- Top scrollbar only -->
+  <div class="matrix-scrollbar" id="scrollbar-top">
+    <div class="scrollbar-track"></div>
+  </div>
+
+  <!-- Actual scrolling content -->
+  <div class="matrix-columns-wrapper" id="matrix-wrapper">
+    <div id="matrix-columns" class="matrix-columns"></div>
+  </div>
+</section>
+
+
   </main>
-  <footer>
-    <p>&copy; 2025 CyberByte</p>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollbar = document.querySelector(".matrix-scrollbar");
+    const columnsWrapper = document.querySelector(".matrix-columns-wrapper");
+
+    if (scrollbar && columnsWrapper) {
+      scrollbar.addEventListener("scroll", () => {
+        columnsWrapper.scrollLeft = scrollbar.scrollLeft;
+      });
+      columnsWrapper.addEventListener("scroll", () => {
+        scrollbar.scrollLeft = columnsWrapper.scrollLeft;
+      });
+    }
+  });
+</script>
+
+  <!-- Footer (copy same structure from index.html) -->
+  <footer class="site-footer">
+    <p>&copy; 2025 CyberByte. All rights reserved.</p>
   </footer>
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
+
 </body>
 </html>
