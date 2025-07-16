@@ -176,7 +176,10 @@ async function loadAttackData() {
 loadAttackData();
 
 
+
+
 /*Hero Rotating Tips*/
+// Tip list
 const tips = [
   "Use strong, unique passwords for every account.",
   "Enable two-factor authentication wherever possible.",
@@ -193,14 +196,30 @@ const tips = [
 let tipIndex = 0;
 const tipElement = document.getElementById("tip-rotator");
 
+// Rotate tip
 function rotateTip() {
   tipElement.textContent = tips[tipIndex];
-  tipElement.style.animation = "none"; // Reset animation
-  tipElement.offsetHeight; // Trigger reflow
-  tipElement.style.animation = ""; // Re-apply animation
+  tipElement.classList.remove("highlighted"); // remove highlight on new tip
+  tipElement.style.animation = "none";
+  tipElement.offsetHeight; // force reflow
+  tipElement.style.animation = "";
 
   tipIndex = (tipIndex + 1) % tips.length;
 }
 
-rotateTip(); // Initial tip
-setInterval(rotateTip, 5000); // Rotate every 5 seconds
+rotateTip();
+setInterval(rotateTip, 5000);
+
+// Click to highlight current tip
+tipElement.addEventListener("click", () => {
+  tipElement.classList.toggle("highlighted");
+});
+
+// Conditional branching message
+if (tips.length === 0) {
+  console.log("No cybersecurity tips available.");
+} else if (tips.length < 5) {
+  console.log("Only a few tips to get started.");
+} else {
+  console.log("Plenty of tips to explore!");
+}
